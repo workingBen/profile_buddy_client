@@ -1,5 +1,5 @@
 .container-narrow
-  %h1 Invite your friends!
+  %h1 Get Started. What's your OkCupid Username?
 
   %input.username(placeholder="OkCupid Username")
   %button.done Start!
