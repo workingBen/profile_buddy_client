@@ -1,5 +1,6 @@
 .container-narrow
-  %h1 Get Started. What's your OkCupid Username?
+  %h1 Get Started.
+  %h2 Let's fetch that shitty OkCupid Profile.
 
   %input.username(placeholder="OkCupid Username")
   %button.done Start!
