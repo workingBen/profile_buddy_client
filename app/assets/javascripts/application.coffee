@@ -1,5 +1,7 @@
 #= require namespace
 
+#= require config/env
+
 #= require jquery-1.9.0.min
 #= require underscore
 #= require backbone
