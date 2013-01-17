@@ -2,9 +2,9 @@ namespace "PB.Models", (Models) ->
   class Models.Base extends Backbone.Model
     url: =>
       if @id?
-        "#{HB.config.serverUrl}/#{@constructor.name.toLowerCase()}s/#{@id}"
+        "#{PB.config.serverUrl}/#{@constructor.name.toLowerCase()}s/#{@id}"
       else
-        "#{HB.config.serverUrl}/#{@constructor.name.toLowerCase()}s"
+        "#{PB.config.serverUrl}/#{@constructor.name.toLowerCase()}s"
 
     constructor: ->
       super
