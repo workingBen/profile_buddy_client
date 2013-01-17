@@ -12,7 +12,7 @@ namespace "PB.Views", (Views) ->
       @$el.html template(model)
 
       unless @$el.closest('html').length # append unless it's already in dom
-        $('#content-container div').removeClass('current')
+        $('#content-container').children().removeClass('current').hide()
         $("#content-container").append @$el
         @$el.addClass('current')
 

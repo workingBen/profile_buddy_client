@@ -1,1 +1,2 @@
-%h1 Invite your friends!
+.container-narrow
+  %h1 Invite your friends!
