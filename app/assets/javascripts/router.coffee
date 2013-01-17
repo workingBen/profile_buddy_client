@@ -2,14 +2,14 @@ namespace "PB", (PB) ->
   class PB.Router extends Backbone.Router
     routes:
       "": "signup"
-      "invite_friends": "inviteFriends"
+      "set_username": "setUsername"
 #     "profile/:id" "profile"
 
     signup: ->
       new PB.Views.Signup()
 
-    inviteFriends: ->
-      new PB.Views.InviteFriends()
+    setUsername: ->
+      new PB.Views.SetUsername()
 
 #   profile: (id) =>
 #     profiles = new PB.Collections.Profiles
