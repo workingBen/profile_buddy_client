@@ -4,6 +4,8 @@
 #= require underscore
 #= require backbone
 
+#= require bootstrap.min
+
 #= require hamlcoffee
 
 #= require router
