@@ -1,4 +1,27 @@
-- debugger
-- {username} = @attributes
+- { username, doing_with_my_life, favorite_books_movies_shows_music_food } = @attributes
+- { first_things_people_notice, friday_night, message_me_if, private_admission } = @attributes
+- { really_good_at, self_summary, six_things, think_about } = @attributes
 
 %h1= "Hey #{username} This is your profile!"
+
+#username= username
+
+#self_summary= self_summary
+
+#doing_with_my_life= doing_with_my_life
+
+#really_good_at= really_good_at
+
+#first_things_people_notice= first_things_people_notice
+
+#favorite_books_movies_shows_music_food= favorite_books_movies_shows_music_food
+
+#six_things= six_things
+
+#think_about= think_about
+
+#friday_night= friday_night
+
+#private_admission= private_admission
+
+#message_me_if= message_me_if
