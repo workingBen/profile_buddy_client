@@ -6,8 +6,6 @@ namespace "PB.Views", (Views) ->
       'click .done': 'done'
 
     initialize: =>
-      debugger
-
       super
 
       @viewmodel = {}

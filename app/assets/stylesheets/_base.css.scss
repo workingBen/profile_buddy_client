@@ -1,0 +1,14 @@
+// base scss
+
+// sass vars
+$primary-color: #AE4726; // #E15739 #AE4726
+$light-orange: #FDE9D4;
+
+$font-stack: "aller_regular", 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+
+#content-container div {
+  display: none;
+  &.current {
+    display: block;
+  }
+}
