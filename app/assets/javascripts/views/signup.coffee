@@ -14,4 +14,4 @@ namespace "PB.Views", (Views) ->
 
     facebookConnect: ->
       console.log "signing up with Facebook, yo!"
-      PB.redirectTo "invite_friends"
+      PB.redirectTo "set_username"
