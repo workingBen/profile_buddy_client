@@ -1,5 +1,11 @@
 namespace "PB.Views", (Views) ->
   class Views.Base extends Backbone.View
+
+    initialize: =>
+      super
+
+      @render()
+
     computeTemplate: =>
       s = @constructor.name # Take the class name
       s = s[0].toLowerCase() + s[1..-1]   # with a lower-cased first letter.
@@ -7,7 +13,7 @@ namespace "PB.Views", (Views) ->
       return JST[s]
 
     render: =>
-      model = @viewmodel or (@model? and @model.attributes) or {}
+      model = @viewmodel or (@model? and @model) or {}
       template = @template or @computeTemplate()
       @$el.html template(model)
 

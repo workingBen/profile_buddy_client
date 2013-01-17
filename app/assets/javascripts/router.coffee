@@ -3,7 +3,7 @@ namespace "PB", (PB) ->
     routes:
       "": "signup"
       "set_username": "setUsername"
-#     "profile/:id" "profile"
+      "profile/:id": "profile"
 
     signup: ->
       new PB.Views.Signup()
@@ -11,9 +11,11 @@ namespace "PB", (PB) ->
     setUsername: ->
       new PB.Views.SetUsername()
 
-#   profile: (id) =>
+    profile: (id) =>
+#     PB.profiles.get('id')
 #     profiles = new PB.Collections.Profiles
-#       profile_id: id
+#       username: username
 
-#     new PB.Views.Profile
+      new PB.Views.Profile
+        model: PB.currentProfile
 #       collection: profiles

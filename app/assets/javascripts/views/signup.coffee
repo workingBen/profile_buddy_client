@@ -5,13 +5,6 @@ namespace "PB.Views", (Views) ->
     events:
       'click .facebook-connect': 'facebookConnect'
 
-    initialize: =>
-      super
-
-      @viewmodel = {}
-
-      @render()
-
     facebookConnect: ->
       console.log "signing up with Facebook, yo!"
       PB.redirectTo "set_username"

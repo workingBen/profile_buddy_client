@@ -10,6 +10,8 @@
 
 #= require hamlcoffee
 
+#= require utils/utils
+
 #= require router
 
 #= require_tree ./templates

@@ -5,13 +5,6 @@ namespace "PB.Views", (Views) ->
     events:
       'click .done': 'done'
 
-    initialize: =>
-      super
-
-      @viewmodel = {}
-
-      @render()
-
     done: ->
       # show loading spinner
 
@@ -20,8 +13,8 @@ namespace "PB.Views", (Views) ->
       $.ajax "#{PB.config.serverUrl}/profile/scrape/#{username}",
         type: "POST"
         success: (data) ->
-          console.log data
-          debugger
-          # create global profile model
-          # redirect to profile page
+          PB.currentProfile = new PB.Models.Profile data
+
+          PB.redirectTo "profile/#{PB.currentProfile.id}"
+
         error: PB.makeErrorCb "Error creating profile for #{username}"

@@ -1,0 +1,4 @@
+- debugger
+- {username} = @attributes
+
+%h1= "Hey #{username} This is your profile!"
