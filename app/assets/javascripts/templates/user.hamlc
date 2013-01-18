@@ -1,2 +1,3 @@
 - if profile = @currentProfile()
-  != JST['profile'](profile)
+  .container-left
+    != JST['profile'](profile)
