@@ -1,1 +1,2 @@
-!= JST['profile'](@currentProfile())
+- if profile = @currentProfile()
+  != JST['profile'](profile)

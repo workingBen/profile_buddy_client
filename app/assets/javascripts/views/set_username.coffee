@@ -13,8 +13,8 @@ namespace "PB.Views", (Views) ->
       $.ajax "#{PB.config.serverUrl}/users/scrape/#{username}",
         type: "POST"
         success: (data) ->
-          PB.currentUser = new PB.Models.User data
+          PB.userBeingEditted = new PB.Models.User data
 
-          PB.redirectTo "users/#{PB.currentUser.username()}"
+          PB.redirectTo "users/#{PB.userBeingEditted.username()}"
 
         error: PB.makeErrorCb "Error creating User or Profile for #{username}"

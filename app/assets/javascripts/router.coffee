@@ -12,9 +12,9 @@ namespace "PB", (PB) ->
       new PB.Views.SetUsername()
 
     user: (username) =>
-      unless PB.currentUser
-        PB.currentUser = new PB.Models.User(id: id)
-        PB.currentUser.fetch()
+      unless PB.userBeingEditted
+        PB.userBeingEditted = new PB.Models.User(username: username)
+        PB.userBeingEditted.fetch()
 
       new PB.Views.User
-        model: PB.currentUser
+        model: PB.userBeingEditted
