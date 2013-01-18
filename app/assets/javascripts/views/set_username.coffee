@@ -10,11 +10,11 @@ namespace "PB.Views", (Views) ->
 
       # post username to server (it will scrape and return the profile)
       username = $('.username').val()
-      $.ajax "#{PB.config.serverUrl}/profiles/scrape/#{username}",
+      $.ajax "#{PB.config.serverUrl}/users/scrape/#{username}",
         type: "POST"
         success: (data) ->
-          PB.currentProfile = new PB.Models.Profile data
+          PB.currentUser = new PB.Models.User data
 
-          PB.redirectTo "profiles/#{PB.currentProfile.id}"
+          PB.redirectTo "users/#{PB.currentUser.username()}"
 
-        error: PB.makeErrorCb "Error creating profile for #{username}"
+        error: PB.makeErrorCb "Error creating User or Profile for #{username}"

@@ -3,7 +3,7 @@ namespace "PB", (PB) ->
     routes:
       "": "signup"
       "set_username": "setUsername"
-      "profiles/:id": "profile"
+      "users/:username": "user"
 
     signup: ->
       new PB.Views.Signup()
@@ -11,14 +11,10 @@ namespace "PB", (PB) ->
     setUsername: ->
       new PB.Views.SetUsername()
 
-    profile: (id) =>
-      unless PB.currentProfile
-        PB.currentProfile = new PB.Models.Profile(id: id)
-        PB.currentProfile.fetch()
-#     PB.profiles.get('id')
-#     profiles = new PB.Collections.Profiles
-#       username: username
+    user: (username) =>
+      unless PB.currentUser
+        PB.currentUser = new PB.Models.User(id: id)
+        PB.currentUser.fetch()
 
-      new PB.Views.Profile
-        model: PB.currentProfile
-#       collection: profiles
+      new PB.Views.User
+        model: PB.currentUser
