@@ -5,31 +5,41 @@
 %h1= "This is #{PB.userBeingEditted.username()}'s profile. Thanks for making it awesome!"
 
 .essay-title My self-summary
-#self_summary.essay= self_summary
+%span.edit
+#self_summary.essay!= PB.toHTML(self_summary)
 
 .essay-title What I’m doing with my life
-#doing_with_my_life.essay= doing_with_my_life
+%span.edit
+#doing_with_my_life.essay!= PB.toHTML(doing_with_my_life)
 
 .essay-title I’m really good at
-#really_good_at.essay= really_good_at
+%span.edit
+#really_good_at.essay!= PB.toHTML(really_good_at)
 
 .essay-title The first things people usually notice about me
-#first_things_people_notice.essay= first_things_people_notice
+%span.edit
+#first_things_people_notice.essay!= PB.toHTML(first_things_people_notice)
 
 .essay-title Favorite books, movies, shows, music, and food
-#favorite_books_movies_shows_music_food.essay= favorite_books_movies_shows_music_food
+%span.edit
+#favorite_books_movies_shows_music_food.essay!= PB.toHTML(favorite_books_movies_shows_music_food)
 
 .essay-title The six things I could never do without
-#six_things.essay= six_things
+%span.edit
+#six_things.essay!= PB.toHTML(six_things)
 
 .essay-title I spend a lot of time thinking about
-#think_about.essay= think_about
+%span.edit
+#think_about.essay!= PB.toHTML(think_about)
 
 .essay-title On a typical Friday night I am
-#friday_night.essay= friday_night
+%span.edit
+#friday_night.essay!= PB.toHTML(friday_night)
 
 .essay-title The most private thing I’m willing to admit
-#private_admission.essay= private_admission
+%span.edit
+#private_admission.essay!= PB.toHTML(private_admission)
 
 .essay-title You should message me if
-#message_me_if.essay= message_me_if
+%span.edit
+#message_me_if.essay!= PB.toHTML(message_me_if)

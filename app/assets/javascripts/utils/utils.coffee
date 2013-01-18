@@ -22,3 +22,6 @@ namespace "PB", (PB) ->
 
   PB.makeErrorCb = (message) ->
     (response) -> PB.errorCb response, message
+
+  PB.toHTML = (str) ->
+    str.replace(/\n/g, '<br/>')
